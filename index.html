@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/material/styles/screen-16x10.css">
+	<link rel="stylesheet" href="./highlight/styles.css">
+</head>
+<body class="shower list">
+	<header class="caption">
+		<h1>XP presentation </h1>
+		<p>Viseven</p>
+	</header>
+	<section class="slide" id="cover">
+		<div style="margin-top: 160px;background: rgba(0, 0, 0, 0.7);padding: 5px">
+			<h2>SOLID-ний JavaScript</h2>
+			<p>Anna Shavurska</p>
+			<p>Viseven</p>
+		</div>
+		<img src="pictures/woman.jpg" alt="" class="cover h">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#cover p a {
+					color:#FFF;
+					}
+			.left{
+				float: left;
+			}
+			.right{
+				float: right;
+			}
+			.slide h2{
+				font-weight: bold;
+			}
+			h3{
+				font: 36px/1 Roboto Light,sans-serif;
+				margin-bottom: 20px;
+			}
+			.slide ol li::before, .slide ul li::before {
+				width: 2em;
+				color: #0e75e6;
+			}
+			.slide ol li, .slide ul li{
+				margin-bottom: 5px;
+			}	
+			.slide::before{
+				content: '';
+				background: url('pictures/viseven.png');
+				background-size: contain;
+				background-repeat: no-repeat;
+				width: 120px;
+				height: 70px;
+				display: block;
+				position: absolute;
+				bottom: 50px;
+				right: 50px;
+			}		
+			.slide.black h2{
+				color: white;
+			}
+			.slide.black::before,
+			.slide.cover::before{
+				content: none;
+			}			
+		</style>
+	</section>
+	<section class="slide white">
+		<h2>Anna Shavurska</h2>
+		<div>
+			<div>
+				<ul>
+					<li>6 років в сім'ї JavaScript</li>
+					<li>Cobalt Team Lead</li>
+					<li>Front-End Tech Lead</li>
+					<li>Tech Lead IT Академії</li>
+					<li>I'm in love with JavaScript</li>
+				</ul>
+				<p class="note">skype: ann.dederkal<br/>e-mail: a.shavurska@viseven.com<br/>twitter: @AnnaShavurska</p>
+			</div>
+			<div style="position: absolute; top: 0; right: 0; width: 450px; overflow: hidden;">
+				<img src="./pictures/me.jpg" width="640px;" style="margin-left: -25%;">
+			</div>
+		</div>
+	</section>
+	<section class="slide">
+		<h2 class="shout shrink">Чому SOLID в JavaScript?</h2>
+	</section>
+	<section class="slide shout">
+		<h2>JavaScript - динамічно-типізована мультипарадигменна мова</h2>
+		<div style="position: relative;">
+			<ul>
+				<li>Об'єктно-орієнтована</li>
+				<li>Функціональна</li>
+				<li>Імперативна</li>
+			</ul>
+		</div>
+	</section>
+	<section class="slide">
+		<h2 class="shout shrink">Скільки нас?</h2>
+	</section>
+	<section class="slide">
+		<h2>Чи задумувались ви на скільки сильно від нас залежить світ?</h2>
+	</section>
+	<section class="slide">
+		<h2>Ми керуємо світом</h2>
+	</section>
+	<section class="slide black">
+		<h2>Чи задумувались ви як багато зла може статись через нас?</h2>
+	</section>
+	<section class="slide">
+		<h2>Ми повинні бути професіоналами</h2>
+	</section>	
+	<section class="slide">
+		<h2>Code Review</h2>
+		<p>А як у вашій команді проходить?</p>
+		<img src="./pictures/mad.jpg" alt="" class="left" style="width:35%;margin-right:10%;">
+		<img src="./pictures/good.png" alt="" class="left" style="width:35%;margin-right:5%;">
+	</section>
+	<section class="slide">
+		<h2>Запахи поганого коду</h2>
+		<ul>
+			<li class="next">Важко вносити зміни - Rigidity</li>
+			<li class="next">Крихкість - Fragility</li>
+			<li class="next">Неподвижність - Immobility</li>
+			<li class="next">В'язкість - Viscosity</li>
+			<li class="next">Невиправдана склідність - Overdesign</li>
+			<li class="next">Дублювання - Needless repetition</li>
+			<li class="next">Непрозорість - Opacity</li>
+		</ul>
+	</section>		
+	<section class="slide">
+		<h2>SOLDI</h2>
+		<img src="./pictures/bob.jpg" width="300" style="float: left; margin-right:50px">
+		<div>
+			<h3>Robert C. Martin (Uncle Bob)</h3>
+			<p>Agile Software Development, Principles, Patterns, and Practices</p>
+			<p>2002</p>
+		</div>
+	</section>	
+	<section class="slide">
+		<h2>SOLID</h2>
+		<p>- твердий, надійний</p>
+		<img src="./pictures/stone.jpg" width="300" style="float: left; margin-right:50px">
+		<div>
+			<p><strong>S</strong>ingle Responsibility Principle<br/>
+			<strong>O</strong>pen-Closed Principle<br/>
+			<strong>L</strong>iskov Substitution Principle<br/>
+			<strong>I</strong>nterface Segregation Principle<br/>
+			<strong>D</strong>ependency Inversion Principle</p>
+		</div>
+	</section>	
+	<section class="slide">
+		<h2 style="font-size:39px;">https://sites.google.com/site/unclebobconsultingllc/</h2>
+		<img src="./pictures/site-n.png" width="900">
+	</section>	
+	<section class="slide">
+		<h2>Що таке ООП?</h2>
+	</section>	
+	<section class="slide">
+		<h2>1. SRP - Single Responsibility Principle</h2>
+		<img src="./pictures/srp.jpg" alt="">
+	</section>	
+	<section class="slide">
+		<h2>Групувати обов'язки - природньо</h2>
+		<img src="./pictures/comp.jpg" alt="">
+	</section>
+	<section class="slide">
+		<h2>Клас повинен мати одну, і лише одна причину для змін</h2>
+		<pre>
+			<code>class Employee{</code>
+			<code>	calculatePayment();</code>
+			<code>	createHoursReport();</code>
+			<code>	writeEmployee();</code>
+			<code>}</code>
+		</pre>
+	</section>			
+	<section class="slide">
+		<h2>Обов'язок класу - це вісь змін</h2>
+		<p>Якщо в класу більше одного обов'язку, то обов'язки стають щепленими, взаємозалежними.</p>
+	</section>	
+	<section class="slide cover">
+		<img src="./pictures/plane-big.jpg" alt="" class="cover" style="height:100%">
+	</section>	
+	<section class="slide cover">
+		<img src="./pictures/lego.jpg" alt="" class="cover" style="height:100%">
+	</section>
+	<section class="slide">
+		<h2>Типові приклади порушення SRP</h2>
+		<ul>
+			<li>God Class</li>
+			<li>Поєднання бізнес-логіки і відображення</li>
+			<li>Поєднання бізнес-логіки і збереження в БД</li>
+		</ul>
+	</section>	
+	<section class="slide">
+		<h2>2. OCP - Open-Closed Principle</h2>
+	</section>	
+	<section class="slide cover">
+		<img src="./pictures/dev.jpg" alt="" class="cover" style="height:100%">
+		<h2>Вимоги завжди<br/> змінюються</h2>
+	</section>	
+	<section class="slide">
+		<h2>Програмні одиниці (класи, модулі, функції і тд) повинні бути відкритими для 
+			розширень, але закритими до змін
+		</h2>
+	</section>	
+	<section class="slide">
+		<h2>Мати можливість розширювати поведінку модуля без зміни самого модуля
+		</h2>
+	</section>	
+	<section class="slide">
+		<pre class="javascript">
+			<code>function drawAllShapes(shapes){</code>
+			<code>	shapes.forEach(shape => {</code>
+			<code>	  switch(shape.type){</code>
+			<code>		case "circle": </code>
+			<code>		  drawCirle(shape);</code>
+			<code>		  break;</code>
+			<code>		case "square":</code>
+			<code>		  drawSquare(shape);</code>
+			<code>		  break;</code>
+			<code>	  }</code>
+			<code>	})</code>
+			<code>}</code>
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>Подумаємо про зміни</h2>
+		<ul>
+			<li class="next">Важко вносити зміни - Rigidity</li>
+			<li class="next">Крихкість - Fragility</li>
+			<li class="next">Неподвижність - Immobility</li>
+			<li class="next">В'язкість - Viscosity</li>
+		</ul>		
+	</section>	
+	<section class="slide">
+		<pre class="javascript" style="float:left; width:58%">
+				<code>class Shape{</code>
+				<code>	draw(){ }</code>
+				<code>}</code>
+				<code>class Circle extends Shape{</code>
+				<code>	draw(){ }</code>
+				<code>}</code>
+				<code>class Square extends Shape{</code>
+				<code>	draw(){ }</code>
+				<code>}</code>
+		</pre>
+		<pre class="javascript" style="float:left; width:41%">
+				<code>function drawAllShapes(shapes){</code>
+				<code>	shapes.forEach(shape => {</code>
+				<code>		shape.draw();</code>
+				<code>	})</code>
+				<code>}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2>Ми усунули запахи коду</h2>
+		<ul>
+			<li class="next"><s>Важко вносити зміни - Rigidity</s></li>
+			<li class="next"><s>Крихкість - Fragility</s></li>
+			<li class="next"><s>Неподвижність - Immobility</s></li>
+			<li class="next"><s>В'язкість - Viscosity</s></li>
+		</ul>		
+	</section>
+	<section class="slide black">
+		<h2 class="place" style="font-size:60px;">АБСТРАКЦІЯ</h2>
+	</section>
+	<section class="slide cover">
+		<img src="./pictures/lie.jpg" alt="" class="cover" style="height:100%">
+	</section>						
+	<section class="slide black">
+		<h2 class="place" style="font-size:60px;">Не можливо закрити модуль від змін 
+			на всіх осях змін</h2>
+	</section>
+	<section class="slide black">
+		<img src="./pictures/evil.png" class="cover" style="opacity: 0.5">
+		<h2 class="place" style="font-size:60px;">Завжди будуть зміни, яких ми не очікували</h2>
+	</section>
+	<section class="slide black">
+		<img src="./pictures/key.jpg" class="cover" width="100%">
+		<h2 style="font-size:60px;">Вибираємо напрямок, де ми очікуємо на зміни</h2>
+	</section>	
+	<section class="slide black">
+		<img src="./pictures/bullet.jpg" class="place bottom" width="100%">
+		<h2>Приймаємо першу кулю, а потім захищаємо 
+			себе від куль, що вилятають з тієї самої зброї</h2>
+	</section>		
+	<section class="slide">
+		<h2>На практиці</h2>
+		<ul>
+			<li>Пишемо тести нашої системи</li>
+			<li>Розробляємо ітеративно</li>
+			<li>Часто показуємо фічі стейкхолдерам</li>
+			<li>Розробляємо спочатку найважливіші фічі</li>
+			<li>Часто робимо релізи</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>3. LSP - Liskov Substitution Principle</h2>
+		<img src="./pictures/liskov.gif" alt="">
+	</section>	
+	<section class="slide">
+		<h2>Підклас не повинен вимагати від коду, що його викликає, більше, ніж
+			вимагав базовий клас. І повинен надавати цьому коду не менше, ніж надавав
+			базовий клас.
+		</h2>
+	</section>
+	<section class="slide">
+		<h2>Функції, які використовують посилання на базові класи повинні мати можливість
+			використовувати об'єкти похідних класів не знаючи про це.
+		</h2>
+	</section>
+	<section class="slide">
+		<pre class="left" style="margin-right:52px;">
+			<code>class Rectangle{</code>
+			<code>	set height(h){</code>
+			<code>	  this.height = h;</code>
+			<code>	}</code>
+			<code>	set width(w){</code>
+			<code>	  this.width = w;</code>
+			<code>	}</code>
+			<code>}</code>
+		</pre>
+		<pre class="left">
+			<code>class Square extends Rectangle{</code>
+			<code>	set height(h){</code>
+			<code>		this.height = h;</code>
+			<code>		this.width = h;</code>
+			<code>	}</code>
+			<code>	set width(w){</code>
+			<code>		this.width = w;</code>
+			<code>		this.height = h;</code>
+			<code>	}</code>
+			<code>}</code>
+		</pre>
+	</section>
+	<section class="slide">
+		<h2 class="place" style="width:60%">if(object instanceof Square){}</h2>
+	</section>
+	<section class="slide">
+		<h2>Типові приклади порушення LSP</h2>
+		<ul>
+			<li>Дочірній клас робить менше, ніж базовий клас</li>
+			<li>Виключення в дочірніх класах</li>
+			<li>Функція, що має посилання посилання на базовий клас 
+				вимушена перевіряти який клас їй передали</li>
+		</ul>
+	</section>
+	<section class="slide">
+		<h2>4. ISP - Interface Segregation Principle</h2>
+	</section>		
+	<section class="slide">
+		<h2>Клієнти не повинні залежати від методів, які вони не використовують</h2>
+	</section>	
+	<section class="slide" style="font-size:20px;">
+		<pre class="left" style="width:40%">
+			<code>interface Stream{</code>
+			<code>	void Read(){ }</code>
+			<code>	void Write(){ }</code>
+			<code>}</code>
+			<code>class File implements</code>
+			<code>				Stream{</code>
+			<code>	void Read(){ }</code>
+			<code>	void Write(){ }</code>
+			<code>}</code>
+		</pre>
+		<pre class="left" style="width:60%">
+			<code>class Keyboard implements Stream{</code>
+			<code>	void Read(){ }</code>
+			<code>	void Write(){</code>
+			<code>		throw new UnsupportedOperationException();</code>
+			<code>	}</code>
+			<code>}</code>
+			<code>class Printer implements Stream{</code>
+			<code>	void Read(){ </code>
+			<code>		throw new UnsupportedOperationException();</code>
+			<code>	}</code>
+			<code>	void Write(){ }</code>
+			<code>}</code>
+		</pre>
+	</section>		
+	<section class="slide">
+		<h2>В чому проблема?</h2>
+		<h2 class="next">Жирний інтерфейс</h2>
+		<img src="./pictures/cat.jpg" width="400" class="place right">
+	</section>
+	<section class="slide" style="font-size:20px;">
+		<pre class="left" style="width:45%">
+			<code>interface ReadableStream{</code>
+			<code>	void Read(){ }</code>
+			<code>}</code>
+			<code>interface WritableStream{</code>
+			<code>	void Write(){ }</code>
+			<code>}</code>
+		</pre>
+		<pre class="left" style="width:55%">
+			<code>class File implements ReadableStream, </code>
+			<code>			WritableStream{</code>
+			<code>	void Read(){ }</code>
+			<code>	void Write(){ }</code>
+			<code>}</code>
+			<code>class Keyboard implements ReadableStream{</code>
+			<code>	void Read(){ }</code>
+			<code>}</code>
+			<code>class Printer implements WritableStream{</code>
+			<code>	void Write(){ }</code>
+			<code>}</code>
+		</pre>
+	</section>	
+	<section class="slide">
+		<h2>В JavaScript немає Інтерфейсів</h2>
+	</section>	
+	<section class="slide">
+		<img src="./pictures/duck.png" class="cover" width="100%">
+	</section>	
+	<section class="slide">
+		<img src="./pictures/fat-class.png" class="cover" width="100%">
+	</section>		
+	<section class="slide">
+		<h2>5. DIP - Dependency Inversion Principle</h2>
+	</section>		
+	<section class="slide">
+		<h2>Application</h2>
+		<img src="./pictures/dip.png" alt="">
+		<img src="./pictures/arrow.png" alt="" class="place right" width="200px">
+		<p class="place top right" style="font-size:60px;line-height:1;margin-top:50px;">FLOW of<br/>CONTROL</p>
+	</section>		
+	<section class="slide">
+		<h2>Модулі вищого рівня не повинні залежати від модулей нижчого рівня.
+			Всі вони повинні залежати від абстракцій.
+		</h2>
+		<p>Абстракція не повинна залежати від деталей реалізації. Деталі реалізації повинні 
+			залежати від абстракції.
+		</p>
+	</section>
+	<section class="slide cover">
+		<img src="./pictures/call.jpg" class="cover" width="100%">
+	</section>	
+	<section class="slide">
+		<h2>Inversion of Control</h2>
+		<img src="./pictures/control.jpg" alt="" width="600px">
+	</section>
+	<section class="slide cover">
+		<img src="./pictures/schema.png" class="cover" width="100%">
+	</section>
+	<section class="slide black">
+		<h2 style="font-size:45px;">Не має значення те, на якій мові написана програма.</h2>
+		<h2 style="font-size:45px;">Якщо дотримуватись SOLID, то ця програма має ОО дизайн,
+			якщо ні - процедурний дизайн.
+		</h2>
+	</section>								
+	<section class="slide">
+		<h2 style="top: 7%; font-weight:bold;font-size:58px;position: absolute;">Be SOLID</h2>
+		<img src="./pictures/bob2.jpg" class="cover w" style="top: 66%;">
+	</section>
+	<section class="slide black">
+		<h2 style="top: 46%; right:10%;color:white;font-weight:bold;position: absolute;font-size: 60px;">THANK YOU</h2>
+		<img src="./pictures/uncle.jpg" class="place left top" height="100%">
+	</section>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"></div>
+	<script src="shower/shower.min.js"></script>
+	<script src="./highlight/script.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>
